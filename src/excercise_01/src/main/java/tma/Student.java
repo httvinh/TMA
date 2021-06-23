@@ -1,4 +1,4 @@
-package exercise1;
+package tma;
 
 import java.util.List;
 import java.util.ArrayList;

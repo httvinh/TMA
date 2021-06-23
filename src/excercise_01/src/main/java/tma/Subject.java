@@ -1,4 +1,4 @@
-package exercise1;
+package tma;
 
 public class Subject {
     protected String name;

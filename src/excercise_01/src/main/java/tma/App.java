@@ -1,8 +1,15 @@
-package exercise1;
+package tma;
 
 import java.util.Scanner;
 
-public class Main {
+public final class App {
+    private App() {
+    }
+
+    /**
+     * @param args The arguments of the program.
+     */
+
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         ManagerStudent student_list = new ManagerStudent();
