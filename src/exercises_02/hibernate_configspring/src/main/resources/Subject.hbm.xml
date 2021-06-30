@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ 
+<hibernate-mapping>
+    <class name="tma.hibernate.configspring.entity.Subject" table="SUBJECT">
+        <meta attribute="class-description">
+            Lớp này chưa thông tin chi tiết về các môn học.
+        </meta>
+
+        <id name="id" type="int" column="id">
+            <generator class="native" />
+        </id>
+
+        <many-to-one name="student" class="tma.hibernate.configspring.entity.Student">
+            <column name="student_id"/>
+        </many-to-one>
+        
+        <property name="name" column="subject_name" type="string"/>
+        <property name="mark" column="mark" type="float"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+ 
+<hibernate-mapping>
+   <class name="tma.hibernate.configspring.entity.Student" table="STUDENT">
+      <meta attribute="class-description">
+         Lớp này chứa chi tiết về học sinh. 
+      </meta>
+
+      <id name="id" type="int" column="id">
+         <generator class="native"/>
+      </id>
+
+      <set name="subjects" cascade="all">
+         <key column="student_id" />
+         <one-to-many class="tma.hibernate.configspring.entity.Subject"/>
+      </set>
+
+      <property name="name" column="student_name" type="string"/>
+      <property name="yearBirth" column="birth_year" type="string"/>
+      <property name="gender" column="gender" type="string"/>
+      <property name="gpa" column="gpa" type="float"/>
+   </class>
+</hibernate-mapping>

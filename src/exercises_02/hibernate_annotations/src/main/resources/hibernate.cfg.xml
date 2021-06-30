@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>    
+<!DOCTYPE hibernate-configuration PUBLIC    
+          "-//Hibernate/Hibernate Configuration DTD 5.3//EN"    
+          "http://hibernate.sourceforge.net/hibernate-configuration-5.3.dtd">    
+    
+<hibernate-configuration>    
+    <session-factory>    
+        <property name="hbm2ddl.auto">update</property>    
+
+        <!-- SQL Dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+ 
+        <!-- Database Connection Settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/exercises</property>
+        <property name="hibernate.connection.username">httvinh</property>
+        <property name="hibernate.connection.password">httvinh002</property>     
+ 
+        <!-- Specifying Session Context -->
+        <property name="hibernate.current_session_context_class">
+            org.hibernate.context.internal.ThreadLocalSessionContext
+        </property>
+ 
+        <!-- Mapping With Model Class Containing Annotations -->
+        <mapping class="tma.hibernate.annotations.entity.Student" />
+        <mapping class="tma.hibernate.annotations.entity.Subject" />
+    </session-factory>    
+    
+</hibernate-configuration>
