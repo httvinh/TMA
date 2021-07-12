@@ -1,0 +1,67 @@
+GET http://localhost:8080/student-management/list
+
+###
+
+GET http://localhost:8080/student-management/id-33
+
+###
+
+DELETE http://localhost:8080/student-management/delete/id-30
+
+###
+
+GET http://localhost:8080/student-management/list/max-gpa
+
+###
+
+GET http://localhost:8080/student-management/list/min-gpa
+
+###
+
+POST http://localhost:8080/student-management/add
+content-type: application/json
+
+{
+    "name": "Hoa",
+    "yearBirth": "1997",
+    "gender": "Female",
+    "subjects": [
+      {
+        "name": "Toan",
+        "mark": 6.5
+      },
+      {
+        "name": "Van",
+        "mark": 5.5
+      },
+      {
+        "name": "Ly",
+        "mark": 7.0
+      }
+    ]
+}
+
+###
+
+POST http://localhost:8080/student-management/update/33
+content-type: application/json
+
+{
+    "name": "Hoa HH",
+    "yearBirth": "1997",
+    "gender": "Male",
+    "subjects": [
+      {
+        "name": "Toan",
+        "mark": 7.7
+      },
+      {
+        "name": "Van",
+        "mark": 5.5
+      },
+      {
+        "name": "Ly",
+        "mark": 8.8
+      }
+    ]
+}
